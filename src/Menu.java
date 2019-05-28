@@ -74,6 +74,7 @@ while(g) {
 		break;
 	}
    }
+
   }
  }
 public void imprimiDados() {
