@@ -21,7 +21,7 @@ while(g) {
 	if(qtd==0) {
 		g=false;
 		break;
-	}
+	}else {
 	System.out.println("Escolha A Forma A Ser Criada!");
 	System.out.println("1-Quadrado, 2-Retangulo, 3-Circulo");
 	s = in.nextInt();
@@ -73,36 +73,47 @@ while(g) {
 		System.out.println("Opçao Invalida!");
 		break;
 	}
+   }
   }
  }
 public void imprimiDados() {
+	System.out.println("\nQuadrados\n");
 	dadosQuadrado();
+	System.out.println("\nRetangulos\n");
 	dadosRetangulo();
+	System.out.println("\nCirculos\n");
 	dadosCirculo();	
  }
 public void dadosQuadrado() {
-	int num=1;	
-	for(Quadrado quadrado : listaquadrado)
+	int num=1;
+	
+	for(Quadrado quadrado : listaquadrado) {
 		if(listaquadrado!=null) {
 	   quadrado.saidaDados(num);
 	num++;
 	}
+	}
+
 }
 
 public void dadosRetangulo() {
-	int num=1;
-	for(Retangulo retangulo : listaretangulo)
-		if(listaretangulo!=null) {
-	   retangulo.saidaDados(num);
-	num++;
-	}	
+	int num2=1;
+	
+	for(Retangulo retangulo : listaretangulo) {
+		if(listaretangulo!=null) { 
+	   retangulo.saidaDados(num2);
+	num2++;
+	}
+		}
 }
 public void dadosCirculo() {
-	int num=1;
-	for(Circulo circulo : listacirculo)
-		if(listacirculo!=null) {
-	   circulo.saidaDados(num);
-	num++;
+	int num3=1;
+	
+	for(Circulo circulo : listacirculo) {
+		if(listacirculo!=null) { 
+	   circulo.saidaDados(num3);
+	num3++;
 	}
+	    }
 }
 }
