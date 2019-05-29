@@ -17,7 +17,7 @@ public class Menu {
         while (true) {
 
             Scanner in = new Scanner(System.in);
-            System.out.println("Digite A Quantidade de (0 � X) de Objetos A Ser Criado: ");
+            System.out.println("Digite A Quantidade de (0 \u00e0 X) de Objetos A Ser Criado: ");
             qtd = in.nextInt();
             if (qtd == 0) {
                 //g=false;
@@ -82,45 +82,51 @@ public class Menu {
 
         int numquad = 1;
 
-        System.out.println("\nQuadrados\n");
-        for (Quadrado quadrado : listaQuadrado) {
+        if (!listaQuadrado.isEmpty()) {
+            System.out.println("\nQuadrados\n");
 
-            System.out.println("Quadrado " + numquad);
-            quadrado.calculaPerimetro();
-            quadrado.calculaArea();
-            numquad++;
-            System.out.println("\n\n\n");
+
+            for (Quadrado quadrado : listaQuadrado) {
+
+                System.out.println("Quadrado " + numquad);
+                quadrado.calculaPerimetro();
+                quadrado.calculaArea();
+                numquad++;
+                System.out.println("\n\n\n");
+            }
         }
-
-        System.out.println("\nRetangulos\n");
-
-
         int numretang = 1;
+
+        if (!listaRetangulo.isEmpty()) {
+            System.out.println("\nRetangulos\n");
+
 
             for (Retangulo retangulo : listaRetangulo) {
 
-                    System.out.println("Retangulo " + numretang);
-                    retangulo.calculaPerimetro();
-                    retangulo.calculaPerimetro();
-                    numretang++;
-                    System.out.println("\n\n\n");
+                System.out.println("Retangulo " + numretang);
+                retangulo.calculaPerimetro();
+                retangulo.calculaPerimetro();
+                numretang++;
+                System.out.println("\n\n\n");
             }
+        }
 
         int numcirc = 1;
 
-        System.out.println("\nCirculos\n");
+        if (!listaCirculo.isEmpty()) {
+            System.out.println("\nCirculos\n");
 
 
             for (Circulo circulo : listaCirculo) {
 
-                    System.out.println("Circulo " + numcirc);
-                    circulo.calculaPerimetro();
-                    circulo.calculaArea();
-                    numcirc++;
-                    System.out.println("\n\n\n");
+                System.out.println("Circulo " + numcirc);
+                circulo.calculaPerimetro();
+                circulo.calculaArea();
+                numcirc++;
+                System.out.println("\n\n\n");
             }
 
-
+        }
 
 
     }//method
