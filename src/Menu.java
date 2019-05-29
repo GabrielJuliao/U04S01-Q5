@@ -2,24 +2,24 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
-	ArrayList<Quadrado> listaquadrado = new ArrayList<>();
-	ArrayList<Retangulo> listaretangulo = new ArrayList<>();
-	ArrayList<Circulo> listacirculo = new ArrayList<>();
+	private ArrayList<Quadrado> listaquadrado = new ArrayList<>();
+	private ArrayList<Retangulo> listaretangulo = new ArrayList<>();
+	private ArrayList<Circulo> listacirculo = new ArrayList<>();
 public void menuPrincipal() {
-	int s = 0;
-	int qtd = 0;
+	int s;
+	int qtd;
 	int x=0;
 	double a = 0, b = 0, c = 0, d = 0;
-	boolean g = true;
+	//boolean g = true;
 	
 	
-while(g) {
+while(true) {
 	
 	Scanner in = new Scanner(System.in);
-	System.out.println("Digite A Quantidade de (0 à X) de Objetos A Ser Criado: ");
+	System.out.println("Digite A Quantidade de (0 ï¿½ X) de Objetos A Ser Criado: ");
 	qtd = in.nextInt();
 	if(qtd==0) {
-		g=false;
+		//g=false;
 		break;
 	}else {
 	System.out.println("Escolha A Forma A Ser Criada!");
@@ -70,51 +70,69 @@ while(g) {
 		}
 		break;
 	default:
-		System.out.println("Opçao Invalida!");
+		System.out.println("Opï¿½ao Invalida!");
 		break;
 	}
    }
 
   }
  }
+
 public void imprimiDados() {
+	int numquad=1;
+
+
+	try{
 	System.out.println("\nQuadrados\n");
-	dadosQuadrado();
-	System.out.println("\nRetangulos\n");
-	dadosRetangulo();
-	System.out.println("\nCirculos\n");
-	dadosCirculo();	
- }
-public void dadosQuadrado() {
-	int num=1;
-	
 	for(Quadrado quadrado : listaquadrado) {
 		if(listaquadrado!=null) {
-	   quadrado.saidaDados(num);
-	num++;
+			System.out.println("Quadrado "+numquad);
+	   quadrado.calculaPerimetro();
+	   quadrado.calculaArea();
+	numquad++;
+			System.out.println("\n\n\n");
+	 }
 	}
+	}catch(Exception e){
+		e.printStackTrace();
 	}
 
-}
+	System.out.println("\nRetangulos\n");
 
-public void dadosRetangulo() {
-	int num2=1;
-	
-	for(Retangulo retangulo : listaretangulo) {
-		if(listaretangulo!=null) { 
-	   retangulo.saidaDados(num2);
-	num2++;
-	}
+
+	int numretang=1;
+
+
+    try {
+	for (Retangulo retangulo : listaretangulo) {
+		if (listaretangulo != null) {
+			System.out.println("Retangulo " + numretang);
+			retangulo.calculaPerimetro();
+			retangulo.calculaPerimetro();
+			numretang++;
+			System.out.println("\n\n\n");
 		}
-}
-public void dadosCirculo() {
-	int num3=1;
-	
-	for(Circulo circulo : listacirculo) {
-		if(listacirculo!=null) { 
-	   circulo.saidaDados(num3);
-	num3++;
 	}
-	    }
+    }catch (Exception e){
+	    e.printStackTrace();
 }
-}
+    int numcirc=1;
+
+    try {
+		for(Circulo circulo : listacirculo) {
+			if(listacirculo!=null) {
+				System.out.println("Circulo " + numcirc);
+				circulo.calculaPerimetro();
+				circulo.calculaArea();
+				numcirc++;
+				System.out.println("\n\n\n");
+			}
+		}
+
+
+	}catch(Exception e){
+    	e.printStackTrace();
+	}
+
+}//method
+}//class

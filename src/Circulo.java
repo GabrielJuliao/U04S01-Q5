@@ -14,12 +14,4 @@ public class Circulo implements ObjetoGeometrico{
 		area = 3.14*(raio*raio);
 		System.out.println("Area do circulo = "+area);
 	}
-	public void saidaDados(int num) {
-		// TODO Auto-generated method stub
-		System.out.println("Circulo "+num);
-		calculaPerimetro();
-		calculaArea();
-		System.out.println("\n\n\n");
-		
-	}
 }

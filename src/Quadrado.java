@@ -15,12 +15,4 @@ public class Quadrado extends Quadrilateros implements ObjetoGeometrico{
 		System.out.println("Area do Quadrado = "+area);
 	}
 
-	public void saidaDados(int num) {
-		System.out.println("Quadrado "+num);
-		super.calculaPerimetro();
-		calculaArea();
-		System.out.println("\n\n\n");
-		
-	}
-
 }

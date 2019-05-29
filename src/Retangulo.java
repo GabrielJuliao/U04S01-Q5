@@ -16,13 +16,4 @@ public class Retangulo extends Quadrilateros implements ObjetoGeometrico{
 		System.out.println("Area do Retangulo = "+area);
 	}
 
-	public void saidaDados(int num) {
-		// TODO Auto-generated method stub
-		System.out.println("Retangulo "+num);
-		super.calculaPerimetro();
-		calculaArea();
-		System.out.println("\n\n\n");
-		
-	}
-
 }
