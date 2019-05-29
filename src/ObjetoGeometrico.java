@@ -1,5 +1,6 @@
 
 public interface ObjetoGeometrico {
-public void calculaPerimetro();
-public void calculaArea();
+    public void calculaPerimetro();
+
+    public void calculaArea();
 }
